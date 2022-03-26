@@ -41,7 +41,11 @@ const electronicsModel = mongoose.model(
   "electronics"
 );
 const jewelleryModel = mongoose.model("jewellery", productSchema, "jewellery");
-
+const home_kitchenModel = mongoose.model(
+  "home_kitchen",
+  productSchema,
+  "home_kitchen"
+);
 module.exports = {
   productSchema,
   jewelleryModel,
@@ -52,4 +56,5 @@ module.exports = {
   womenWesternModel,
   womenEthnicModel,
   menModel,
+  home_kitchenModel,
 };
