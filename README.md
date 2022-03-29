@@ -23,6 +23,8 @@ api routes
 - /women_western/:id
 - /women_ethnic
 - /women_ethnic/:id
+- /cart - to get the cart object
+- /cart - to post the data to the cart 
 
 ## Each of the above route will have 2 parts a normal get all products and a get by id
 
