@@ -9,6 +9,16 @@ const cart_get = async (req, res) => {
   }
 };
 
+const cart_del = async (req, res) => {
+  try {
+    let id = req.params.id;
+    let cart = await cartModel.deleteOne({ _id: id });
+    res.status(200).json(cart);
+  } catch (e) {
+    res.status(502).send("something went wrong here ::...");
+  }
+};
+
 const cart_get_by_id = async (req, res) => {
   try {
     let id = req.params.id;
@@ -32,4 +42,5 @@ module.exports = {
   cart_get,
   cart_get_by_id,
   cart_post,
+  cart_del,
 };

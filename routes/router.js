@@ -34,6 +34,7 @@ const {
   cart_get,
   cart_get_by_id,
   cart_post,
+  cart_del
 } = require("../controllers/cart.controller");
 
 const router = express.Router();
@@ -59,6 +60,7 @@ router.get("/women_ethnic/:id", women_ethnic_get_by_id);
 router.get("/cart", cart_get);
 router.post("/cart", cart_post);
 router.get("/cart/:id", cart_get_by_id);
+router.delete("/cart/:id", cart_del);
 
 router.get("*", (req, res) => {
   res
