@@ -25,6 +25,11 @@ api routes
 - /women_ethnic/:id
 - /cart - to get the cart object
 - /cart - to post the data to the cart 
+- /cart/:id - to get cart item by id
+- /cart/:id - to delete cart item by id
+- /user - to get user data requires request body (either email, or googleId, or facebookId or mobile number)
+- /user/create - to create a new user after signup
+- /user/otp - to get otp for login
 
 ## Each of the above route will have 2 parts a normal get all products and a get by id
 
