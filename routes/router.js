@@ -36,7 +36,7 @@ const {
   cart_post,
   cart_del,
 } = require("../controllers/cart.controller");
-const { user_get, user_post } = require("../controllers/user.controller");
+const { user_get, user_post, user_otp } = require("../controllers/user.controller");
 
 const router = express.Router();
 
@@ -63,8 +63,9 @@ router.post("/cart", cart_post);
 router.get("/cart/:id", cart_get_by_id);
 router.delete("/cart/:id", cart_del);
 
-router.get("/user", user_get);
-router.post("/user", user_post);
+router.post("/user", user_get);
+router.post("/user/create", user_post);
+router.post("/user/otp", user_otp);
 
 router.get("*", (req, res) => {
   res

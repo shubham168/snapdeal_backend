@@ -9,14 +9,15 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    
+  },
+  otp: {
+    type: String,
   },
   mobile: {
     type: String,
   },
   displayName: {
     type: String,
-   
   },
   address: {
     type: Object,
