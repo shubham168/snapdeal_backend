@@ -31,6 +31,7 @@ const cart_get_by_id = async (req, res) => {
 
 const cart_post = async (req, res) => {
   try {
+    delete req.body._id;
     let addedToCart = await cartModel.create(req.body);
     res.status(200).json(addedToCart);
   } catch (e) {
