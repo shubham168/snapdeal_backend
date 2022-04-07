@@ -35,6 +35,8 @@ api routes
 
 Features:
 
+- Uses nodemailer to send OPT for the user e-mail
 - get all data for different types of products
 - get data for a single product by id
 - Uses atlas database
+
